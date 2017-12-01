@@ -36,7 +36,7 @@ func main() {
 	v := url.Values{}
 	twitterStreamHandler := twitterAPI.PublicStreamSample(v)
 	statusCount := 0
-	for statusCount < 10 {
+	for statusCount < 200 {
 		// tweet data comes in through a channel
 		item := <-twitterStreamHandler.C
 		switch status := item.(type) {
